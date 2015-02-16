@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7155F9F01A362E6200DCFE37 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7155F9EF1A362E6200DCFE37 /* AVFoundation.framework */; };
 		7166998E1A17C9E800287B6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166998D1A17C9E800287B6A /* AppDelegate.swift */; };
 		716699901A17C9E800287B6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166998F1A17C9E800287B6A /* ViewController.swift */; };
 		716699931A17C9E800287B6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 716699911A17C9E800287B6A /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7155F9EF1A362E6200DCFE37 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		716699881A17C9E800287B6A /* SampleRadioApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SampleRadioApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7166998C1A17C9E800287B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7166998D1A17C9E800287B6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7155F9F01A362E6200DCFE37 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +62,7 @@
 		7166997F1A17C9E800287B6A = {
 			isa = PBXGroup;
 			children = (
+				7155F9EF1A362E6200DCFE37 /* AVFoundation.framework */,
 				7166998A1A17C9E800287B6A /* SampleRadioApp */,
 				716699A01A17C9E800287B6A /* SampleRadioAppTests */,
 				716699891A17C9E800287B6A /* Products */,
@@ -407,6 +411,7 @@
 				716699A91A17C9E800287B6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		716699AA1A17C9E800287B6A /* Build configuration list for PBXNativeTarget "SampleRadioAppTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +420,7 @@
 				716699AC1A17C9E800287B6A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
