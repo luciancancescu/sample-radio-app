@@ -14,6 +14,7 @@
 		716699951A17C9E800287B6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716699941A17C9E800287B6A /* Images.xcassets */; };
 		716699981A17C9E800287B6A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716699961A17C9E800287B6A /* LaunchScreen.xib */; };
 		716699A41A17C9E800287B6A /* SampleRadioAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716699A31A17C9E800287B6A /* SampleRadioAppTests.swift */; };
+		719D7CCF1A9AEF0000440643 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719D7CCE1A9AEF0000440643 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		7166999D1A17C9E800287B6A /* SampleRadioAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleRadioAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		716699A21A17C9E800287B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716699A31A17C9E800287B6A /* SampleRadioAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRadioAppTests.swift; sourceTree = "<group>"; };
+		719D7CCE1A9AEF0000440643 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				719D7CCF1A9AEF0000440643 /* MediaPlayer.framework in Frameworks */,
 				7155F9F01A362E6200DCFE37 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +65,7 @@
 		7166997F1A17C9E800287B6A = {
 			isa = PBXGroup;
 			children = (
+				719D7CCE1A9AEF0000440643 /* MediaPlayer.framework */,
 				7155F9EF1A362E6200DCFE37 /* AVFoundation.framework */,
 				7166998A1A17C9E800287B6A /* SampleRadioApp */,
 				716699A01A17C9E800287B6A /* SampleRadioAppTests */,
