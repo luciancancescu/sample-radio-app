@@ -16,12 +16,12 @@ class RadioPlayer {
     
     func play() {
         player.play()
-        isPlaying = false
+        isPlaying = true
     }
     
     func pause() {
         player.pause()
-        isPlaying = true
+        isPlaying = false
     }
     
     func toggle() {
@@ -30,5 +30,9 @@ class RadioPlayer {
         } else {
             play()
         }
+    }
+
+    func currentlyPlaying() -> Bool {
+        return isPlaying
     }
 }

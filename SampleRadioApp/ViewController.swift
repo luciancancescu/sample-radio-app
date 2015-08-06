@@ -46,10 +46,10 @@ class ViewController: UIViewController {
     }
 
     func toggle() {
-        if playButton.titleLabel?.text == "Play" {
-            playRadio()
-        } else {
+        if RadioPlayer.sharedInstance.currentlyPlaying() {
             pauseRadio()
+        } else {
+            playRadio()
         }
     }
     
