@@ -14,6 +14,7 @@
 		716699951A17C9E800287B6A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716699941A17C9E800287B6A /* Images.xcassets */; };
 		716699981A17C9E800287B6A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 716699961A17C9E800287B6A /* LaunchScreen.xib */; };
 		716699A41A17C9E800287B6A /* SampleRadioAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716699A31A17C9E800287B6A /* SampleRadioAppTests.swift */; };
+		7180915A1B7318CB00E6F6B0 /* RadioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718091591B7318CB00E6F6B0 /* RadioPlayer.swift */; };
 		719D7CCF1A9AEF0000440643 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719D7CCE1A9AEF0000440643 /* MediaPlayer.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +40,7 @@
 		7166999D1A17C9E800287B6A /* SampleRadioAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleRadioAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		716699A21A17C9E800287B6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		716699A31A17C9E800287B6A /* SampleRadioAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleRadioAppTests.swift; sourceTree = "<group>"; };
+		718091591B7318CB00E6F6B0 /* RadioPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RadioPlayer.swift; sourceTree = "<group>"; };
 		719D7CCE1A9AEF0000440643 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -87,6 +89,7 @@
 			children = (
 				7166998D1A17C9E800287B6A /* AppDelegate.swift */,
 				7166998F1A17C9E800287B6A /* ViewController.swift */,
+				718091591B7318CB00E6F6B0 /* RadioPlayer.swift */,
 				716699911A17C9E800287B6A /* Main.storyboard */,
 				716699941A17C9E800287B6A /* Images.xcassets */,
 				716699961A17C9E800287B6A /* LaunchScreen.xib */,
@@ -220,6 +223,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7180915A1B7318CB00E6F6B0 /* RadioPlayer.swift in Sources */,
 				716699901A17C9E800287B6A /* ViewController.swift in Sources */,
 				7166998E1A17C9E800287B6A /* AppDelegate.swift in Sources */,
 			);

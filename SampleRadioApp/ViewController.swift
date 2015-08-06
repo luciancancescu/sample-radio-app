@@ -13,7 +13,6 @@ import MediaPlayer
 class ViewController: UIViewController {
     
     @IBOutlet weak var playButton: UIButton!
-    var player:AVPlayer = AVPlayer(URL: NSURL(string: "http://www.radiobrasov.ro/listen.m3u"))
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,7 +26,7 @@ class ViewController: UIViewController {
                 MPMediaItemPropertyArtist: "87,8fm",
 //                MPMediaItemPropertyArtwork: albumArt
             ]
-            MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = songInfo
+            MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = songInfo as [NSObject : AnyObject]
         }
         if (AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)) {
             println("Receiving remote control events")
@@ -55,28 +54,13 @@ class ViewController: UIViewController {
     }
     
     func playRadio() {
-        player.play()
+        RadioPlayer.sharedInstance.play()
         playButton.setTitle("Pause", forState: UIControlState.Normal)
     }
     
     func pauseRadio() {
-        player.pause()
+        RadioPlayer.sharedInstance.pause()
         playButton.setTitle("Play", forState: UIControlState.Normal)
-    }
-
-    override func remoteControlReceivedWithEvent(event: UIEvent) {
-        if event.type == UIEventType.RemoteControl {
-            if event.subtype == UIEventSubtype.RemoteControlPlay {
-                println("received remote play")
-                playRadio()
-            } else if event.subtype == UIEventSubtype.RemoteControlPause {
-                println("received remote pause")
-                pauseRadio()
-            } else if event.subtype == UIEventSubtype.RemoteControlTogglePlayPause {
-                println("received toggle")
-                toggle()
-            }
-        }
     }
 }
 
