@@ -17,22 +17,22 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        playButton.setTitle("Play", forState: UIControlState.Normal)
         if NSClassFromString("MPNowPlayingInfoCenter") != nil {
 //            let image:UIImage = UIImage(named: "logo_player_background")!
 //            let albumArt = MPMediaItemArtwork(image: image)
-            var songInfo: NSMutableDictionary = [
+            let songInfo = [
                 MPMediaItemPropertyTitle: "Radio Brasov",
                 MPMediaItemPropertyArtist: "87,8fm",
 //                MPMediaItemPropertyArtwork: albumArt
             ]
-            MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = songInfo as [NSObject : AnyObject]
+            MPNowPlayingInfoCenter.defaultCenter().nowPlayingInfo = songInfo
         }
-        if (AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, error: nil)) {
-            println("Receiving remote control events")
+        do {
+            try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
             UIApplication.sharedApplication().beginReceivingRemoteControlEvents()
-        } else {
-            println("Audio Session error.")
+            print("Receiving remote control events\n")
+        } catch {
+            print("Audio Session error.\n")
         }
     }
 
@@ -41,7 +41,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    @IBAction func buttonPressed(sender: AnyObject) {
+    @IBAction func playButtonPressed(sender: UIButton) {
         toggle()
     }
 
@@ -55,12 +55,12 @@ class ViewController: UIViewController {
     
     func playRadio() {
         RadioPlayer.sharedInstance.play()
-        playButton.setTitle("Pause", forState: UIControlState.Normal)
+        playButton.setTitle("Pause radio", forState: UIControlState.Normal)
     }
     
     func pauseRadio() {
         RadioPlayer.sharedInstance.pause()
-        playButton.setTitle("Play", forState: UIControlState.Normal)
+        playButton.setTitle("Play radio", forState: UIControlState.Normal)
     }
 }
 
