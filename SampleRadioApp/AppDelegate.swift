@@ -46,17 +46,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("no event\n")
             return
         }
-        if event.type == UIEventType.RemoteControl {
-            if event.subtype == UIEventSubtype.RemoteControlPlay {
-                print("received remote play")
-                RadioPlayer.sharedInstance.play()
-            } else if event.subtype == UIEventSubtype.RemoteControlPause {
-                print("received remote pause")
-                RadioPlayer.sharedInstance.pause()
-            } else if event.subtype == UIEventSubtype.RemoteControlTogglePlayPause {
-                print("received toggle")
-                RadioPlayer.sharedInstance.toggle()
-            }
+        guard event.type == UIEventType.RemoteControl else {
+            print("received other event type\n")
+            return
+        }
+        switch event.subtype {
+        case UIEventSubtype.RemoteControlPlay:
+            print("received remote play\n")
+            RadioPlayer.sharedInstance.play()
+        case UIEventSubtype.RemoteControlPause:
+            print("received remote pause\n")
+            RadioPlayer.sharedInstance.pause()
+        case UIEventSubtype.RemoteControlTogglePlayPause:
+            print("received toggle\n")
+            RadioPlayer.sharedInstance.toggle()
+        default:
+            print("received \(event.subtype) which we did not process\n")
         }
     }
 }
