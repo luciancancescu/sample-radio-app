@@ -1,5 +1,5 @@
 # Sample iOS Radio App using Swift
 
-Part 1: http://luciancancescu.blogspot.ch/2015/02/how-to-build-ios-radio-app-with-swift.html
+Part 1: http://www.luciancancescu.com/blog/2015/02/how-to-build-an-ios-radio-app-with-swift-part-1/
 
-Part 2: http://luciancancescu.blogspot.ch/2015/02/how-to-build-ios-radio-app-with-swift_23.html
+Part 2: http://www.luciancancescu.com/blog/2015/02/how-to-build-an-ios-radio-app-with-swift-part-2/
